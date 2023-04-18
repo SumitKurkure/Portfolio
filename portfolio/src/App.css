@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.header {
+  padding: 1rem 3rem;
+  box-shadow: 0 4px 3px -3px rgba(0, 0, 0, .08);
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  right: 0;
+  left: 0;
+  background: white;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.header .logo img {
+  width: 23rem;
+  cursor: pointer;
+}
+
+.header .brand-name {
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bolder;
+  padding: 5px;
+  width: max-content;
+  text-decoration: none;
+  color: black;
+  font-family: 'Montserrat';
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0px !important;
+}
+
+.header nav ul li {
+  display: inline-flex;
+  margin: 0px 15px;
+}
+
+.header nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  font-size: 23px;
+  transition: 0.1s;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.header nav ul li a.active {
+  border-bottom: 2.5px solid #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  text-decoration-color: #ffcb00;
+}
+
+
+.header nav ul li a::after {
+  content: '';
+  width: 0;
+  height: 2.5px;
+  background: #ffcb00;
+  display: block;
+  transition: 0.2s linear;
+}
+
+.header nav ul li a.active::after {
+  display: none;
+}
+
+.header nav ul li a:hover::after {
+  width: 100%;
+}
+
+.header nav .icon {
+  i {
+    font-size: 18px;
+    color: #000;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .searchBox {
+    outline: #000;
+    padding: 5px;
+  }
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+
+  input {
+    outline: none;
+  }
+}
+
+.header .logo-menu-div {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.fa-magnifying-glass {
+  margin-left: 1.5rem !important;
+}
+
+.fa-xmark {
+  font-size: 22px !important;
+  padding-left: 10px;
+}
+
+nav .menu-btn i {
+  color: black;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  nav .menu-btn i {
+    display: block;
+  }
+
+  #click:checked~.menu-btn i:before {
+    content: "\f00d";
+  }
+
+  nav ul {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    color: white;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+
+  #click:checked~ul {
+    left: 0;
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 40px 0;
+  }
+
+  nav ul li a {
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  #click:checked~ul li a {
+    margin-left: -50px;
+    border-bottom: 0;
+  }
+
+  #click:checked~ul li a:hover {
+    color: #ffcb00;
+  }
+
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: black;
+  }
+
+  .header nav ul li a.active {
+    border-bottom: 0;
+    padding: 1rem;
+  }
+
+  .header nav ul li {
+    display: inline-block;
+    margin: 15px 50px;
+  }
+}
+
+@media (max-width : '600px') {
+  .header .logo img {
+    width: 16rem;
+  }
+}
+
+/*////////////// react css added /////////////// */
+
+.slot-1 {
+  padding: 4rem;
+  background-color: #050330;
+}
+
+.one {
+  color: #3DFAFF;
+}
+
+.two {
+  color: #61EFB4;
+}
