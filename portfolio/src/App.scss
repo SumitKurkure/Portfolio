@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@500&display=swap');
 
 .header {
-  padding: 1rem 3rem;
-  box-shadow: 0 4px 3px -3px rgba(0, 0, 0, .08);
+  padding: 1rem 4rem;
+  /* box-shadow: 0 4px 3px -3px rgba(0, 0, 0, .08); */
+  background-color: #050330;
+
 }
 
 .header nav {
@@ -16,7 +19,7 @@
   align-items: center;
   right: 0;
   left: 0;
-  background: white;
+  background: #050330;
   z-index: 1000;
   cursor: pointer;
 }
@@ -33,11 +36,13 @@
   padding: 5px;
   width: max-content;
   text-decoration: none;
-  color: black;
+  color: white;
   font-family: 'Montserrat';
 }
 
 .header nav ul {
+  display: flex;
+  align-items: center;
   list-style: none;
   margin: 0px !important;
 }
@@ -47,9 +52,13 @@
   margin: 0px 15px;
 }
 
+.header nav ul li span {
+  color: white;
+}
+
 .header nav ul li a {
   text-decoration: none;
-  color: #000;
+  color: white;
   font-weight: 600;
   font-size: 23px;
   transition: 0.1s;
@@ -204,16 +213,115 @@ input[type="checkbox"] {
 }
 
 /*////////////// react css added /////////////// */
+.box-1 {
+  background-color: #050330;
+  display: flex;
+}
 
 .slot-1 {
   padding: 4rem;
-  background-color: #050330;
+  width: 50%;
+
+  .btn {}
 }
 
-.one {
+.slot-1-text {
   color: #3DFAFF;
+  font-family: 'Montserrat';
+  font-weight: 600;
+  font-size: 3rem;
 }
 
 .two {
   color: #61EFB4;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: -1rem;
+  padding: -1rem;
+}
+
+.wrapper .static-txt {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 400;
+  background-color: blue;
+  padding: 0px 1rem;
+  border-radius: 5pz;
+  font-family: Montserrat;
+}
+
+.wrapper .dynamic-txts {
+  height: 100px;
+  line-height: 90px;
+  overflow: hidden;
+}
+
+.dynamic-txts li {
+  list-style: none;
+  color: #FC6D6D;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+  100% {
+    top: -360px;
+  }
+}
+
+.dynamic-txts li span {
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+
+.dynamic-txts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #050330;
+  border-left: 2px solid #FC6D6D;
+  animation: typing 3s steps(10) infinite;
+  padding: 5px;
+}
+
+@keyframes typing {
+
+  40%,
+  60% {
+    left: calc(100% + 30px);
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.box-2 {
+  background-color: #050330;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+
+  .slot-1,
+  .slot-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.33%;
+  }
+
+  .slot-2 {
+    width: 33.33%;
+  }
 }
