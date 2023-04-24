@@ -7,7 +7,9 @@ const Header = () => {
             <nav>
                 <div className="logo">
                     {/* <Link className='brand-name' to={"/"}>SUMIT KURKURE</Link> */}
-                    <img src="logo.png" alt="" />
+                    <Link to={'/'}>
+                        <img src="logo.png" alt="" />
+                    </Link>
                 </div>
                 <input type="checkbox" id="click" />
                 <label htmlFor="click" className="menu-btn">
@@ -16,6 +18,7 @@ const Header = () => {
                     <li><NavLink to={"/about"}>About</NavLink></li>
                     <li><NavLink to={"/contact"} >Contact</NavLink></li>
                     <li><NavLink to={"/services"} >Services</NavLink></li>
+                    <li><NavLink to={"/projects"} >Projects</NavLink></li>
                     <li><NavLink to={"/schedule"} >ScheduleCall</NavLink></li>
                 </ul>
             </nav>

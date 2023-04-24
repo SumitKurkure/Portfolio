@@ -7,6 +7,7 @@ import Contact from './Component/Contact';
 import Services from './Component/Services';
 import ScheduleCall from './Component/ScheduleCall';
 import Footer from './Component/Footer';
+import Projects from './Component/Projects';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='/contact' element={<Contact />}></Route>
           <Route path='/services' element={<Services />}></Route>
           <Route path='/schedule' element={<ScheduleCall />}></Route>
+          <Route path='/projects' element={<Projects/>}></Route>
         </Routes>
         <Footer/>
       </BrowserRouter>
