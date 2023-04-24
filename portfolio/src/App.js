@@ -6,6 +6,7 @@ import About from './Component/About';
 import Contact from './Component/Contact';
 import Services from './Component/Services';
 import ScheduleCall from './Component/ScheduleCall';
+import Footer from './Component/Footer';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path='/services' element={<Services />}></Route>
           <Route path='/schedule' element={<ScheduleCall />}></Route>
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   )
